@@ -21,14 +21,8 @@ public class ModuloFarmacia extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
-        jMenu9 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -55,7 +49,7 @@ public class ModuloFarmacia extends javax.swing.JFrame {
         jLabel1.setText("HOSPITAL");
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/paciente.png"))); // NOI18N
-        jMenu1.setText("Pacientes");
+        jMenu1.setText("Estancias");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu1ActionPerformed(evt);
@@ -72,46 +66,16 @@ public class ModuloFarmacia extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lista sintomas.png"))); // NOI18N
-        jMenu2.setText("Lista sintomas");
-        jMenu2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu2ActionPerformed(evt);
-            }
-        });
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/medicinas.png"))); // NOI18N
+        jMenu8.setText("Medicamentos");
 
-        jMenuItem3.setText("Registro");
+        jMenuItem3.setText("jMenuItem3");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
-
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sintoma.png"))); // NOI18N
-        jMenu3.setText("Sintomas");
-        jMenuBar1.add(jMenu3);
-
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lista sintomas.png"))); // NOI18N
-        jMenu4.setText("Lista sintomas");
-        jMenuBar1.add(jMenu4);
-
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tratamientos.png"))); // NOI18N
-        jMenu5.setText("Tratamientos");
-        jMenuBar1.add(jMenu5);
-
-        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lista sintomas.png"))); // NOI18N
-        jMenu7.setText("Lista tratamientos");
-        jMenuBar1.add(jMenu7);
-
-        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/medicinas.png"))); // NOI18N
-        jMenu8.setText("Medicamentos");
-
-        jMenu9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lista sintomas.png"))); // NOI18N
-        jMenu9.setText("Lista medicamentos");
-        jMenu8.add(jMenu9);
+        jMenu8.add(jMenuItem3);
 
         jMenuBar1.add(jMenu8);
 
@@ -145,25 +109,22 @@ public class ModuloFarmacia extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
-
-    }//GEN-LAST:event_jMenu2ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        listasintomas1 jj=new listasintomas1();
-        escritorio.add(jj);
-        jj.show();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
 
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        paciente1 uu=new paciente1();
+        estancias1 uu=new estancias1();
         escritorio.add(uu);
         uu.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+      medicamento1 uu=new medicamento1();
+      escritorio.add(uu);
+      uu.show();
+      
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,14 +165,8 @@ public class ModuloFarmacia extends javax.swing.JFrame {
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
