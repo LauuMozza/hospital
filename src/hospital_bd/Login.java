@@ -1,6 +1,8 @@
 package hospital_bd;
 
 import com.mysql.jdbc.Connection;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,91 +15,94 @@ public class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
+        this.setOpacity(0.7f);
+        this.setSize(800, 600);
+        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+        Dimension tamPantalla= Toolkit.getDefaultToolkit().getScreenSize(); 
+Dimension tamFrame = this.getSize(); 
+        if (tamFrame .height > tamPantalla.height) 
+tamFrame .height = tamPantalla.height; 
+if (tamFrame .width > tamPantalla.width) 
+tamFrame .width = tamPantalla.width; 
+this.setLocation((tamPantalla.width - tamFrame .width) / 2, (tamPantalla.height - tamFrame .height) / 2); 
+this.setVisible(true); 
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        user_tf = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        pass_tf = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        user_1 = new javax.swing.JTextField();
+        pass_1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel1.setText("Nombre del usuario");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(200, 140, 156, 22);
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setText("Contraseña");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(220, 240, 93, 22);
+
+        user_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                user_1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(user_1);
+        user_1.setBounds(190, 190, 156, 20);
+
+        pass_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pass_1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(pass_1);
+        pass_1.setBounds(190, 290, 156, 20);
+
         jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(230, 370, 80, 30);
 
-        user_tf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                user_tfActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel2.setText("Usuario");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel3.setText("Contraseña");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(user_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pass_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(89, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(user_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pass_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pro_segu_infor_03 (1).jpg"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(-330, 10, 1250, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String user = user_tf.getText();
-        String pass = pass_tf.getText();        
+        String user = user_1.getText();
+        String pass = pass_1.getText();      
         consult(user,pass);
-        
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void user_tfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_tfActionPerformed
+    private void user_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_user_1ActionPerformed
 
-    }//GEN-LAST:event_user_tfActionPerformed
+    private void pass_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pass_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pass_1ActionPerformed
 
 
-    public static void main(String args[]) {
+   public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -128,13 +133,16 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField pass_tf;
-    private javax.swing.JTextField user_tf;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField pass_1;
+    private javax.swing.JTextField user_1;
     // End of variables declaration//GEN-END:variables
 
-    private void connect_and_catch(String sql,String mensaje) {
+    
+    
+private void connect_and_catch(String sql,String mensaje) {
         try{            
             Class.forName("com.mysql.jdbc.Driver");
             String cadena = "jdbc:mysql://127.0.0.1/Hospital?user=richi&password=12345";
