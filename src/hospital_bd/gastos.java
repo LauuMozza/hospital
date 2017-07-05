@@ -24,6 +24,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class gastos extends javax.swing.JFrame {
 
+<<<<<<< HEAD
      ArrayList<gastos1> lista = new ArrayList<gastos1> ();
     /**
      * Creates new form Muestra_paciente
@@ -34,9 +35,21 @@ public class gastos extends javax.swing.JFrame {
      String idregistro ="";
      String costotoal ="";
      String registroid ="";
+=======
+    ArrayList<paciente> lista = new ArrayList<paciente>();
+    /**
+     * Creates new form Muestra_paciente
+     */
+
+    String idcuenta = "";
+    String idregistro = "";
+    String costotoal = "";
+
+>>>>>>> ef01ea92f32c3eba5e4c8bd5e792c7451297ec15
     public gastos() {
-         
+
         initComponents();
+<<<<<<< HEAD
            consultar();
          
          Dimension tamPantalla= Toolkit.getDefaultToolkit().getScreenSize(); 
@@ -51,6 +64,22 @@ this.setVisible(true);
             
             
     
+=======
+
+        jTable1.addMouseListener(new MouseAdapter() {
+
+            DefaultTableModel model = new DefaultTableModel();
+
+            public void mouseClicked(MouseEvent e) {
+                int i = jTable1.getSelectedRow();
+                idcuenta = (jTable1.getValueAt(i, 0).toString());
+                idregistro = (jTable1.getValueAt(i, 1).toString());
+                costotoal = (jTable1.getValueAt(i, 2).toString());
+            }
+
+        });
+
+>>>>>>> ef01ea92f32c3eba5e4c8bd5e792c7451297ec15
     }
 
     /**
@@ -95,6 +124,7 @@ this.setVisible(true);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+<<<<<<< HEAD
            AgregarCUENTA ac = new AgregarCUENTA();
            ac.setVisible(true);
  
@@ -162,6 +192,100 @@ this.setVisible(true);
     }
     
     
+=======
+
+        paciente u = new paciente(tfidcuenta.getText(), tfidregistro.getText(), tfcostototal.getText());
+        lista.add(u);
+
+        mostrar();
+        tfidcuenta.setText("");
+        tfidregistro.setText("");
+        tfcostototal.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
+
+        for (int i = 0; i < lista.size(); i++) {
+            if (idcuenta == lista.get(i).getIDCUENTAPAICNETE()) {
+                lista.remove(i);
+
+            }
+        }
+        String matriz[][] = new String[lista.size()][3];
+
+        for (int i = 0; i < lista.size(); i++) {
+            matriz[i][0] = lista.get(i).getIDCUENTAPAICNETE();
+            matriz[i][1] = lista.get(i).getIDREGISTRO();
+            matriz[i][2] = lista.get(i).getCOSTOTOTAL();
+
+        }
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                matriz,
+                new String[]{
+                    "Id cuenta paciente", "Id registr", "Costo total"
+                }
+        ));
+
+
+    }//GEN-LAST:event_btneliminarActionPerformed
+
+    public void mostrar() {
+
+        String matriz[][] = new String[lista.size()][3];
+
+        for (int i = 0; i < lista.size(); i++) {
+            matriz[i][0] = lista.get(i).getIDCUENTAPAICNETE();
+            matriz[i][1] = lista.get(i).getIDREGISTRO();
+            matriz[i][2] = lista.get(i).getCOSTOTOTAL();
+
+        }
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                matriz,
+                new String[]{
+                    "Id cuenta paciente", "Id registr", "Costo total"
+                }
+        ));
+    }
+
+    public void modificar() {
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            String cadena = "jdbc:mysql://localhost/prueba?user=root&password=12345678";
+            Connection con;
+            PreparedStatement stmt;
+
+            con = DriverManager.getConnection(cadena);
+            String idcuental = tfidcuenta.getText();
+            String idregistro = tfidregistro.getText();
+            String costototal = tfcostototal.getText();
+
+            String sql = "update editorial set ";
+
+            sql += "nombre = " + "\"" + idregistro + "\", ";
+
+            sql += "contacto = " + "\"" + costototal + "\"" + " where id_editorial =" + idcuenta + " ; ";
+
+            JOptionPane.showMessageDialog(null, sql);
+            stmt = con.prepareStatement(sql);
+            int sw = stmt.executeUpdate();
+            if (sw != 0) {
+                JOptionPane.showMessageDialog(null, "Registro Modificado");
+
+            }
+        } catch (ClassNotFoundException e) {
+            JOptionPane.showMessageDialog(null, e);
+        } catch (SQLException e1) {
+            JOptionPane.showMessageDialog(null, e1);
+        } catch (Exception e2) {
+            JOptionPane.showMessageDialog(null, e2);
+        }
+
+    }
+
+>>>>>>> ef01ea92f32c3eba5e4c8bd5e792c7451297ec15
     /**
      * @param args the command line arguments
      */

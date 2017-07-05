@@ -30,6 +30,7 @@ public class MenuFinanzas extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -41,11 +42,20 @@ public class MenuFinanzas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(51, 135, 252, 186);
+        jButton1.setBounds(150, 170, 252, 186);
 
         jButton2.setText("Gasto de hospital");
         getContentPane().add(jButton2);
-        jButton2.setBounds(321, 135, 237, 186);
+        jButton2.setBounds(420, 170, 237, 186);
+
+        jButton3.setText("Menu Principal");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(10, 10, 180, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -55,6 +65,13 @@ public class MenuFinanzas extends javax.swing.JFrame {
         gastos p = new gastos ();
         p.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.dispose();
+        MainMenu menu = new MainMenu();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,5 +111,6 @@ public class MenuFinanzas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
 }

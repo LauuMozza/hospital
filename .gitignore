@@ -1,16 +1,11 @@
 # NetBeans specific #
-nbproject/private/
+nbproject/
 build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
+test/
 
-# Class Files #
-*.class
+build.xml
+manifest.mf
 
 # Package Files #
 *.jar
-*.war
-*.ear
+*.class
