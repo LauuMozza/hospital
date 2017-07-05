@@ -60,7 +60,7 @@ public class ListaPacientes extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         this.dispose();
-        Modulolobby menu = new Modulolobby();
+        ModuloLobby menu = new ModuloLobby();
         menu.setVisible(true);
         menu.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed

@@ -103,7 +103,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
-        Modulolobby lobby = new Modulolobby();
+        ModuloLobby lobby = new ModuloLobby();
         lobby.setVisible(true);        
         lobby.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed

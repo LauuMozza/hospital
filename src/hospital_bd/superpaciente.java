@@ -206,204 +206,182 @@ public class superpaciente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tf_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_nombreActionPerformed
- 
-        
-        String nulo=" ";
+
+        String nulo = " ";
         if (tf_nombre.getText().equals(nulo)) {
-            JOptionPane.showMessageDialog(null,"*** El id autores es requerido ***");
-        }else{
+            JOptionPane.showMessageDialog(null, "*** El id autores es requerido ***");
+        } else {
 
             tf_telefono.requestFocusInWindow();
 
         }
-        
-        
+
+
     }//GEN-LAST:event_tf_nombreActionPerformed
 
     private void tf_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_telefonoActionPerformed
- 
-        
-        String nulo=" ";
+
+        String nulo = " ";
         if (tf_telefono.getText().equals(nulo)) {
-            JOptionPane.showMessageDialog(null,"*** El id autores es requerido ***");
-        }else{
+            JOptionPane.showMessageDialog(null, "*** El id autores es requerido ***");
+        } else {
 
             tf_edad.requestFocusInWindow();
 
         }
-        
-        
+
+
     }//GEN-LAST:event_tf_telefonoActionPerformed
 
     private void tf_edadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_edadActionPerformed
- 
-        
-        String nulo=" ";
+
+        String nulo = " ";
         if (tf_edad.getText().equals(nulo)) {
-            JOptionPane.showMessageDialog(null,"*** El id autores es requerido ***");
-        }else{
+            JOptionPane.showMessageDialog(null, "*** El id autores es requerido ***");
+        } else {
 
             tf_direccion.requestFocusInWindow();
 
         }
-        
-        
+
+
     }//GEN-LAST:event_tf_edadActionPerformed
 
     private void tf_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_direccionActionPerformed
- 
-        
-        String nulo=" ";
+
+        String nulo = " ";
         if (tf_direccion.getText().equals(nulo)) {
-            JOptionPane.showMessageDialog(null,"*** El id autores es requerido ***");
-        }else{
+            JOptionPane.showMessageDialog(null, "*** El id autores es requerido ***");
+        } else {
 
             tf_sexo.requestFocusInWindow();
 
         }
-        
-        
+
+
     }//GEN-LAST:event_tf_direccionActionPerformed
 
     private void tf_sexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_sexoActionPerformed
-        
- 
-        
-        String nulo=" ";
+
+        String nulo = " ";
         if (tf_sexo.getText().equals(nulo)) {
-            JOptionPane.showMessageDialog(null,"*** El id autores es requerido ***");
-        }else{
+            JOptionPane.showMessageDialog(null, "*** El id autores es requerido ***");
+        } else {
 
             btn1.requestFocusInWindow();
 
         }
-        
+
     }//GEN-LAST:event_tf_sexoActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      Modulolobby jj=new  Modulolobby();
-      jj.setVisible(true);
+        this.dispose();
+        ModuloLobby jj = new ModuloLobby();
+        jj.setVisible(true);
+        jj.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
-public void nuevo(){
-         
-   
-    tf_nombre.setText("");
-    tf_telefono.setText("");
-    tf_edad.setText("");
-    tf_direccion.setText("");
-     tf_sexo.setText("");
-  
-  
-    tf_nombre.requestFocusInWindow();
-     
-     }
-   
-    public void grabar(){
-     try  {    
-        
-       Class.forName("com.mysql.jdbc.Driver");
-       String cadena ="jdbc:mysql://localhost/hospital?user=root&password=12345678";
-       Connection con= DriverManager.getConnection(cadena);
-      PreparedStatement stmt=null;
-      String nombre=tf_nombre.getText();
-      String telefono=tf_telefono.getText();
-      String edad=tf_edad.getText();
-      String direccion=tf_direccion.getText();
-      String sexo=tf_sexo.getText();
-   
-      
-      
-      
-      String sql="  insert into paciente values(";
-      
-       sql += "\""+tf_nombre +"\""+ ","  +"\""+tf_telefono+"\""+",";
-       sql += "\""+tf_edad+ "\""+","+"\""+tf_direccion+"\""+",";
-    
-        sql += "\""+tf_sexo+"\""+")";
-        
-        
-       JOptionPane.showMessageDialog(null,sql);
-      stmt=con.prepareStatement(sql);
-      int sw=stmt.executeUpdate();
-       if (sw!=0) {
-           JOptionPane.showMessageDialog(null,"Registrado de alta con éxito");
-           nuevo();
-           
-       }
-       
-   }catch (ClassNotFoundException e1){ JOptionPane.showMessageDialog(null,e1); }
-   catch (SQLException e2){
-    JOptionPane.showMessageDialog(null,e2);
-   } 
-   catch (Exception e3){
-   
-   }
-    }
-    
-    
-    
+    public void nuevo() {
 
-    
-     public void modificar(){
-  
-    try{
-         Class.forName("com.mysql.jdbc.Driver");
-         String cadena="jdbc:mysql://localhost/prueba?user=root&password=12345678";
-         Connection con;
-         PreparedStatement stmt;
-       
-         con= DriverManager.getConnection(cadena);
-        String nombre=tf_nombre.getText();
-      String telefono=tf_telefono.getText();
-      String edad=tf_edad.getText();
-      String direccion=tf_direccion.getText();
-      String sexo=tf_sexo.getText();
-   
-     
-      
-      
-      String sql="update paciente set ";
-       sql += "telefono = " +"\""+ tf_telefono + "\"" +",";
-          sql += "edad = " +"\""+ tf_edad + "\"" + "direccion =" +"\""+ tf_direccion + "\""+" , ";
-           sql += "sexo = " +"\""+ tf_sexo + "\"" + " where nombre =" +"\""+ tf_nombre +"\""+ " ; ";
-         
-             JOptionPane.showMessageDialog(null, sql);
-           stmt=con.prepareStatement(sql);
-           int sw= stmt.executeUpdate();
-           if(sw!=0){
-               JOptionPane.showMessageDialog(null, "Registro Modificado");
-               nuevo();
-           }
-         }catch(ClassNotFoundException e){
-         JOptionPane.showMessageDialog(null, e);
-     }
-     catch(SQLException e1){
-         JOptionPane.showMessageDialog(null, e1);
-     }
-     catch(Exception e2){
-         JOptionPane.showMessageDialog(null, e2);
-     }
-    
+        tf_nombre.setText("");
+        tf_telefono.setText("");
+        tf_edad.setText("");
+        tf_direccion.setText("");
+        tf_sexo.setText("");
+
+        tf_nombre.requestFocusInWindow();
+
     }
-    
-    
-    
+
+    public void grabar() {
+        try {
+
+            Class.forName("com.mysql.jdbc.Driver");
+            String cadena = "jdbc:mysql://localhost/hospital?user=root&password=12345678";
+            Connection con = DriverManager.getConnection(cadena);
+            PreparedStatement stmt = null;
+            String nombre = tf_nombre.getText();
+            String telefono = tf_telefono.getText();
+            String edad = tf_edad.getText();
+            String direccion = tf_direccion.getText();
+            String sexo = tf_sexo.getText();
+
+            String sql = "  insert into paciente values(";
+
+            sql += "\"" + tf_nombre + "\"" + "," + "\"" + tf_telefono + "\"" + ",";
+            sql += "\"" + tf_edad + "\"" + "," + "\"" + tf_direccion + "\"" + ",";
+
+            sql += "\"" + tf_sexo + "\"" + ")";
+
+            JOptionPane.showMessageDialog(null, sql);
+            stmt = con.prepareStatement(sql);
+            int sw = stmt.executeUpdate();
+            if (sw != 0) {
+                JOptionPane.showMessageDialog(null, "Registrado de alta con éxito");
+                nuevo();
+
+            }
+
+        } catch (ClassNotFoundException e1) {
+            JOptionPane.showMessageDialog(null, e1);
+        } catch (SQLException e2) {
+            JOptionPane.showMessageDialog(null, e2);
+        } catch (Exception e3) {
+
+        }
+    }
+
+    public void modificar() {
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            String cadena = "jdbc:mysql://localhost/prueba?user=root&password=12345678";
+            Connection con;
+            PreparedStatement stmt;
+
+            con = DriverManager.getConnection(cadena);
+            String nombre = tf_nombre.getText();
+            String telefono = tf_telefono.getText();
+            String edad = tf_edad.getText();
+            String direccion = tf_direccion.getText();
+            String sexo = tf_sexo.getText();
+
+            String sql = "update paciente set ";
+            sql += "telefono = " + "\"" + tf_telefono + "\"" + ",";
+            sql += "edad = " + "\"" + tf_edad + "\"" + "direccion =" + "\"" + tf_direccion + "\"" + " , ";
+            sql += "sexo = " + "\"" + tf_sexo + "\"" + " where nombre =" + "\"" + tf_nombre + "\"" + " ; ";
+
+            JOptionPane.showMessageDialog(null, sql);
+            stmt = con.prepareStatement(sql);
+            int sw = stmt.executeUpdate();
+            if (sw != 0) {
+                JOptionPane.showMessageDialog(null, "Registro Modificado");
+                nuevo();
+            }
+        } catch (ClassNotFoundException e) {
+            JOptionPane.showMessageDialog(null, e);
+        } catch (SQLException e1) {
+            JOptionPane.showMessageDialog(null, e1);
+        } catch (Exception e2) {
+            JOptionPane.showMessageDialog(null, e2);
+        }
+
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
