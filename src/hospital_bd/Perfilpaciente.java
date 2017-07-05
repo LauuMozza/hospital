@@ -211,7 +211,7 @@ public class Perfilpaciente extends javax.swing.JFrame {
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, -1, -1));
 
         jLabel12.setText("Medicamentos");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
