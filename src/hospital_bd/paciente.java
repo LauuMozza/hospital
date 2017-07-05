@@ -1,3 +1,5 @@
+package hospital_bd;
+
 
 import java.awt.Image;
 import java.io.File;
@@ -50,8 +52,8 @@ public class paciente extends javax.swing.JFrame {
         tf_direccion = new javax.swing.JTextField();
         tf_sexo = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        tf_conocido = new javax.swing.JTextField();
-        tf_desconocido = new javax.swing.JRadioButton();
+        tf_registro = new javax.swing.JTextField();
+        tf_traslado = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
         btn1 = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
@@ -60,9 +62,7 @@ public class paciente extends javax.swing.JFrame {
         lblfoto = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         txtnomimagen = new javax.swing.JTextField();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,16 +121,16 @@ public class paciente extends javax.swing.JFrame {
 
         jLabel1.setText("Conocido:");
 
-        tf_conocido.addActionListener(new java.awt.event.ActionListener() {
+        tf_registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_conocidoActionPerformed(evt);
+                tf_registroActionPerformed(evt);
             }
         });
 
-        tf_desconocido.setText("Desconocido");
-        tf_desconocido.addActionListener(new java.awt.event.ActionListener() {
+        tf_traslado.setText("Desconocido");
+        tf_traslado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_desconocidoActionPerformed(evt);
+                tf_trasladoActionPerformed(evt);
             }
         });
 
@@ -168,8 +168,8 @@ public class paciente extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_conocido, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_desconocido)
+                    .addComponent(tf_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_traslado)
                     .addComponent(tf_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
@@ -199,9 +199,9 @@ public class paciente extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(tf_conocido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_registro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(tf_desconocido))
+                .addComponent(tf_traslado))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -294,21 +294,25 @@ public class paciente extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
+        jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -321,13 +325,15 @@ public class paciente extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(21, 21, 21)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(71, 71, 71))
         );
@@ -390,7 +396,7 @@ public class paciente extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"*** El código autor es requerido ***");
         }else{
 
-           tf_conocido.requestFocusInWindow();
+           tf_registro.requestFocusInWindow();
 
         }
     }//GEN-LAST:event_tf_sexoActionPerformed
@@ -427,27 +433,32 @@ public class paciente extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void tf_conocidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_conocidoActionPerformed
+    private void tf_registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_registroActionPerformed
       String nulo=" ";
-        if (tf_conocido.getText().equals(nulo)) {
+        if (tf_registro.getText().equals(nulo)) {
             JOptionPane.showMessageDialog(null,"*** El código autor es requerido ***");
         }else{
 
-            tf_desconocido.requestFocusInWindow();
+            tf_traslado.requestFocusInWindow();
 
         }
-    }//GEN-LAST:event_tf_conocidoActionPerformed
+    }//GEN-LAST:event_tf_registroActionPerformed
 
-    private void tf_desconocidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_desconocidoActionPerformed
+    private void tf_trasladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_trasladoActionPerformed
    String nulo=" ";
-        if (tf_desconocido.getText().equals(nulo)) {
+        if (tf_traslado.getText().equals(nulo)) {
             JOptionPane.showMessageDialog(null,"*** El código autor es requerido ***");
         }else{
 
             btn1.requestFocusInWindow();
 
         }
-    }//GEN-LAST:event_tf_desconocidoActionPerformed
+    }//GEN-LAST:event_tf_trasladoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      Modulolobby uu=new Modulolobby();
+      uu.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void nuevo(){
     
@@ -458,8 +469,8 @@ public class paciente extends javax.swing.JFrame {
     tf_direccion.setText("");
     tf_sexo.setText("");
     tf_nombre.requestFocusInWindow();
-     tf_conocido.setText("");
-    tf_desconocido.requestFocusInWindow();
+     tf_registro.setText("");
+    tf_traslado.requestFocusInWindow();
      }
      
      
@@ -478,15 +489,15 @@ public class paciente extends javax.swing.JFrame {
       String  edad=tf_edad.getText();
       String direccion=tf_nombre.getText();
       String sexo=tf_telefono.getText();
-        String conocido=tf_conocido.getText();
-      String desconocido=tf_desconocido.getText();
+        String Registro_idRegistro=tf_registro.getText();
+      String Traslado_idTraslado=tf_traslado.getText();
     
       
       String sql="  insert into paciente values( ";
       sql +=  "\"" + nombre + "\""+",";
       sql += telefono +"," +  edad +",";
       sql += "\""+direccion +"\""+ "," + "\"" + sexo + "\""+",";
-      sql += "\""+conocido +"\""+ "," + "\"" + desconocido + "\""+")";  
+      sql += "\""+Registro_idRegistro + ","  + Traslado_idTraslado+")";  
       
       JOptionPane.showMessageDialog(null,sql);
      
@@ -531,8 +542,8 @@ public class paciente extends javax.swing.JFrame {
       String  edad=tf_edad.getText();
       String direccion=tf_nombre.getText();
       String sexo=tf_telefono.getText();
-       String conocido=tf_conocido.getText();
-      String desconocido=tf_desconocido.getText();
+       String conocido=tf_registro.getText();
+      String desconocido=tf_traslado.getText();
       
       String sql="update paciente set ";
       
@@ -541,8 +552,8 @@ public class paciente extends javax.swing.JFrame {
            sql += "edad= "+ edad +",";
            sql += "direccion= "+"\"" + direccion + "\""+",";
              sql += "sexo= "+ sexo +",";
-           sql += "conocido= " + conocido +",";
-           sql += "desconocido= " + desconocido  + " where nombre =" + tf_nombre + " ; ";
+           sql += "Registro_idRegitro= " + conocido +",";
+           sql += "Traslado_idTraslado= " + desconocido  + " where nombre =" + tf_nombre + " ; ";
          
            
            
@@ -652,27 +663,25 @@ public class paciente extends javax.swing.JFrame {
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
     private javax.swing.JButton btn3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lblfoto;
-    private javax.swing.JTextField tf_conocido;
-    private javax.swing.JRadioButton tf_desconocido;
     private javax.swing.JTextField tf_direccion;
     private javax.swing.JTextField tf_edad;
     private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_registro;
     private javax.swing.JTextField tf_sexo;
     private javax.swing.JTextField tf_telefono;
+    private javax.swing.JRadioButton tf_traslado;
     private javax.swing.JTextField txtnomimagen;
     // End of variables declaration//GEN-END:variables
 }
