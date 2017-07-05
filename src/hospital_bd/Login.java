@@ -17,7 +17,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
-        jPanel1.setBackground(new Color(123,14,123,64));
+        jPanel1.setBackground(new Color(123, 14, 123, 64));
         this.setSize(800, 600);
         int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
         int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
@@ -115,7 +115,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pro_segu_infor_03 (1).jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-320, 10, 1120, 600);
+        jLabel2.setBounds(-320, -10, 1120, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -127,8 +127,10 @@ public class Login extends javax.swing.JFrame {
         //consult(user, pass);
 
         //Entrada Directa
+        this.dispose();
         MainMenu n = new MainMenu();
         n.setVisible(true);
+        n.setLocationRelativeTo(null);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -233,7 +235,6 @@ public class Login extends javax.swing.JFrame {
             }
             if (coun) {
                 System.out.println("Usuario no valido");
-
             }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

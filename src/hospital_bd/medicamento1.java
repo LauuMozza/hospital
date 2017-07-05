@@ -184,17 +184,6 @@ public class medicamento1 extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt1ActionPerformed
-        String nulo=" ";
-        if (txt1.getText().equals(nulo)) {
-            JOptionPane.showMessageDialog(null,"*** El código autor es requerido ***");
-        }else{
-
-            txt2.requestFocusInWindow();
-
-        }
-    }//GEN-LAST:event_txt1ActionPerformed
-
     private void txt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt2ActionPerformed
         String nulo=" ";
         if (txt2.getText().equals(nulo)) {
@@ -243,6 +232,17 @@ public class medicamento1 extends javax.swing.JInternalFrame {
 
         dispose();
     }//GEN-LAST:event_btn5ActionPerformed
+
+    private void txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt1ActionPerformed
+        String nulo=" ";
+        if (txt1.getText().equals(nulo)) {
+            JOptionPane.showMessageDialog(null,"*** El código autor es requerido ***");
+        }else{
+
+            txt2.requestFocusInWindow();
+
+        }
+    }//GEN-LAST:event_txt1ActionPerformed
 
 
     public void nuevo(){
