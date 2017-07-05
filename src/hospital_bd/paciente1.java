@@ -17,10 +17,6 @@ public class paciente1 extends javax.swing.JInternalFrame {
         initComponents();
     }
 
-
-
-
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
