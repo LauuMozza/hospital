@@ -1,6 +1,7 @@
 package hospital_bd;
 
 import com.mysql.jdbc.Connection;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.DriverManager;
@@ -16,7 +17,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setOpacity(0.7f);
+        jPanel1.setBackground(new Color(123,14,123,64));
         this.setSize(800, 600);
         int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
         int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
@@ -36,12 +37,13 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         user_1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         pass_1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -49,29 +51,21 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Nombre del usuario");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(200, 140, 156, 22);
-
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("Contraseña");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(220, 240, 93, 22);
 
         user_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 user_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(user_1);
-        user_1.setBounds(190, 190, 156, 20);
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setText("Contraseña");
 
         pass_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pass_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(pass_1);
-        pass_1.setBounds(190, 290, 156, 20);
 
         jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -79,12 +73,49 @@ public class Login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(230, 370, 80, 30);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pro_segu_infor_03 (1).jpg"))); // NOI18N
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(-330, 10, 1250, 600);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(user_1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addComponent(pass_1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addGap(36, 36, 36)
+                .addComponent(user_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel3)
+                .addGap(40, 40, 40)
+                .addComponent(pass_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(90, 100, 320, 410);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pro_segu_infor_03 (1).jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-320, 10, 1120, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -141,8 +172,9 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField pass_1;
     private javax.swing.JTextField user_1;
     // End of variables declaration//GEN-END:variables
