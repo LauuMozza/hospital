@@ -9,9 +9,9 @@ import java.util.logging.Logger;
 public class DB {
 
    private final static String bd = "Hospital";
-   private final static String login = "richi";
-   private final static String password = "123456";
-   private final static String host = "192.168.43.245";
+   private final static String login = "root";
+   private final static String password = "12345678";
+   private final static String host = "localhost";
    private final static String url = "jdbc:mysql://" + host + "/"+bd;
 
     public static Connection getConnection(){
