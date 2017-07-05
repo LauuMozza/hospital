@@ -291,7 +291,7 @@ public class superpaciente extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.dispose();
-        ModuloLobby jj = new ModuloLobby();
+        Modulolobby jj = new Modulolobby();
         jj.setVisible(true);
         jj.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
