@@ -7,7 +7,12 @@ package hospital_bd;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -15,7 +20,6 @@ import javax.swing.table.DefaultTableModel;
  * @author almas
  */
 public class checar_paciente extends javax.swing.JFrame {
-ArrayList<paciente> lista = new ArrayList<paciente> ();
     /**
      * Creates new form checar_paciente
      */
@@ -63,105 +67,96 @@ ArrayList<paciente> lista = new ArrayList<paciente> ();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setText("Id paciente");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(25, 42, 63, 16);
-
-        jLabel2.setText("Nombre");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(25, 79, 45, 16);
-
-        jLabel3.setText("Telefono");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(25, 119, 50, 16);
-
-        jLabel4.setText("Edad");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(25, 159, 28, 16);
-
-        jLabel5.setText("Direccion");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(25, 199, 52, 16);
-
-        jLabel6.setText("Sexo");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(25, 239, 28, 16);
-
-        jLabel7.setText("Registro_id registro");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(25, 279, 112, 16);
-
-        jLabel8.setText("Traslado_id traslado");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(25, 319, 117, 16);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(238, 39, 136, 22);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(238, 79, 204, 22);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(238, 119, 204, 22);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(238, 159, 204, 22);
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(238, 199, 204, 22);
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(238, 239, 204, 22);
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(238, 279, 204, 22);
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(238, 319, 204, 22);
-
-        jButton1.setText("Nuevo");
+        jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(100, 380, 67, 25);
-
-        jButton2.setText("Eliminar");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(270, 380, 79, 25);
+        jButton1.setBounds(300, 645, 90, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "Id paciente", "Nombre", "Telefono", "Edad", "Direccion", "Sexo", "Registro idregistro", "Traslado_idtraslado"
+                "Id cuenta paciente", "Id registro", "Costo total", "Registro_id"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(14, 445, 570, 134);
+        jScrollPane1.setBounds(20, 20, 640, 610);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      gastos1 g = new gastos1();
+      g.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    
+     public void consultar(){
+    
+        int sw=0;
+        
+        try{
+        
+         Connection con;//conecta los datos a la base de datos.
+         PreparedStatement stmt;//traduce las cadenas para mandarlas a la base de datos
+         ResultSet tabla;
+         con= DB.getConnection();
+         
+         
+     
+      
+      String sql=" select * from cuentapaciente " ;
+            
+      
+            
+         
+            
+           stmt=con.prepareStatement(sql);
+           System.out.println(sql);
+           
+           tabla=stmt.executeQuery();
+           
+          
+           while (tabla.next()) // 
+           {
+               
+         
+           sw=1;
+              
+               DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+               model.addRow(new Object [] {  tabla.getString(2), tabla.getString(3), tabla.getString(4)});
+               
+           }
+         
+           
+           }
+           catch(SQLException e1){
+           JOptionPane.showMessageDialog(null, e1);
+           }
+          catch(Exception e2){
+          JOptionPane.showMessageDialog(null, e2);
+           }
+        
+        if (sw==0) {
+              JOptionPane.showMessageDialog(null, "***no existe el registro*** ");
+        }
+    
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -199,24 +194,7 @@ ArrayList<paciente> lista = new ArrayList<paciente> ();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

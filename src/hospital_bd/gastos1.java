@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  *
  * @author almas
  */
-public class AgregarCUENTA extends javax.swing.JFrame {
+public class gastos1 extends javax.swing.JFrame {
 
     /**
-     * Creates new form AgregarCUENTA
+     * Creates new form gastos1
      */
-    public AgregarCUENTA() {
+    public gastos1() {
         initComponents();
     }
 
@@ -36,53 +36,45 @@ public class AgregarCUENTA extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        tfidpaciente = new javax.swing.JTextField();
-        tfpaciente = new javax.swing.JTextField();
-        tftelefono = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        tfedad = new javax.swing.JTextField();
+        tfidcuenta = new javax.swing.JTextField();
+        tfidregistro = new javax.swing.JTextField();
+        tfidcosto = new javax.swing.JTextField();
+        tfregistroid = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        tfdireccion = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        tfsexo = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        tfregistroid = new javax.swing.JTextField();
-        tftrasladoid = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setText("Id paciente");
+        jLabel1.setText("Cuenta Paciente");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(21, 88, 130, 16);
+        jLabel1.setBounds(273, 38, 100, 30);
 
-        jLabel2.setText("Nombre");
+        jLabel2.setText("Id cuenta ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 140, 130, 16);
+        jLabel2.setBounds(46, 125, 60, 20);
 
-        jLabel3.setText("Telefono");
+        jLabel3.setText("Id registro");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 190, 50, 16);
-        getContentPane().add(tfidpaciente);
-        tfidpaciente.setBounds(170, 90, 190, 22);
-        getContentPane().add(tfpaciente);
-        tfpaciente.setBounds(170, 140, 190, 22);
-        getContentPane().add(tftelefono);
-        tftelefono.setBounds(170, 190, 190, 22);
+        jLabel3.setBounds(46, 182, 80, 16);
 
-        jLabel4.setText("Paciente");
+        jLabel4.setText("Costo total");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(220, 30, 120, 20);
+        jLabel4.setBounds(46, 235, 61, 16);
 
-        jLabel5.setText("Edad");
+        jLabel5.setText("Registro_id");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(20, 240, 90, 16);
-        getContentPane().add(tfedad);
-        tfedad.setBounds(170, 240, 190, 22);
+        jLabel5.setBounds(46, 286, 64, 16);
+        getContentPane().add(tfidcuenta);
+        tfidcuenta.setBounds(174, 122, 190, 22);
+        getContentPane().add(tfidregistro);
+        tfidregistro.setBounds(174, 179, 190, 22);
+        getContentPane().add(tfidcosto);
+        tfidcosto.setBounds(174, 232, 190, 22);
+        getContentPane().add(tfregistroid);
+        tfregistroid.setBounds(174, 283, 190, 22);
 
         jButton1.setText("Nuevo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -91,40 +83,11 @@ public class AgregarCUENTA extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(100, 460, 67, 25);
+        jButton1.setBounds(80, 370, 67, 25);
 
         jButton2.setText("Eliminar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(250, 460, 79, 25);
-
-        jLabel6.setText("Direccion");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(20, 280, 60, 20);
-        getContentPane().add(tfdireccion);
-        tfdireccion.setBounds(170, 280, 190, 22);
-
-        jLabel7.setText("Sexo");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(20, 330, 50, 16);
-        getContentPane().add(tfsexo);
-        tfsexo.setBounds(170, 320, 190, 22);
-
-        jLabel8.setText("Registro_id");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(20, 370, 80, 16);
-
-        jLabel9.setText("Traslado_id");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(20, 410, 67, 16);
-        getContentPane().add(tfregistroid);
-        tfregistroid.setBounds(170, 360, 190, 22);
-        getContentPane().add(tftrasladoid);
-        tftrasladoid.setBounds(170, 400, 190, 22);
+        jButton2.setBounds(270, 370, 79, 25);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -133,11 +96,7 @@ public class AgregarCUENTA extends javax.swing.JFrame {
        grabar ();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        borrar ();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-     public void grabar(){
+      public void grabar(){
               try  {    
         
      
@@ -145,19 +104,16 @@ public class AgregarCUENTA extends javax.swing.JFrame {
       PreparedStatement stmt=null;
       
       
-      String  id_paciente = tfidpaciente.getText();
-      String nombre=tfpaciente.getText();
-      String telefono=tftelefono.getText();
-      String edad=tfedad.getText();
-      String direccion=tfdireccion.getText();
-      String sexo=tfsexo.getText();
-      String registro_id =tfregistroid.getText();
-      String traslado_id=tftrasladoid.getText();
+      String  id_paciente = tfidcuenta.getText();
+      String nombre=tfidregistro.getText();
+      String telefono=tfidcosto.getText();
+      String edad=tfregistroid.getText();
+     
          
       
       String sql="  insert into paciente values( ";
-      sql += id_paciente + ","+"\""+ nombre + "\""+",";
-      sql += telefono+ ","+ edad +","+"\""+ direccion+"\""+","+"\""+sexo +"\""+","+registro_id+","+traslado_id + ")";
+      sql += id_paciente + ","+ nombre +",";
+      sql += telefono +","+edad + ")";
       
       JOptionPane.showMessageDialog(null,sql);
      
@@ -178,30 +134,23 @@ public class AgregarCUENTA extends javax.swing.JFrame {
    
    } 
    
-    
-    
-    
-    
     }
-     
-     
-       
-    public void borrar(){
+
+       public void borrar(){
      try{
         
         
-         Class.forName("com.mysql.jdbc.Driver");
-         String cadena="jdbc:mysql://localhost/prueba?user=root&password=12345678";
+        
          Connection con;
          PreparedStatement stmt;
-         con= DriverManager.getConnection(cadena);
+         con= DB.getConnection();
          //ResultSet autores;
          
  
       
-      String sql="delete from paciente where idPaciente="  ;
+      String sql="delete from cuentapaciente where idCuentaPaciente="  ;
       
-        sql+="\""+tfidpaciente.getText()+"\";";
+        sql+="\""+tfidcuenta.getText()+"\";";
     
          
      
@@ -216,8 +165,6 @@ public class AgregarCUENTA extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(null, "Registro borrado");
                
           }
-          }catch(ClassNotFoundException e){
-          JOptionPane.showMessageDialog(null, e);
           }
          catch(SQLException e1){
          JOptionPane.showMessageDialog(null, e1);
@@ -226,7 +173,6 @@ public class AgregarCUENTA extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(null, e2);
          }
     }
-    
     /**
      * @param args the command line arguments
      */
@@ -244,20 +190,20 @@ public class AgregarCUENTA extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgregarCUENTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gastos1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgregarCUENTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gastos1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgregarCUENTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gastos1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgregarCUENTA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(gastos1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AgregarCUENTA().setVisible(true);
+                new gastos1().setVisible(true);
             }
         });
     }
@@ -270,17 +216,9 @@ public class AgregarCUENTA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField tfdireccion;
-    private javax.swing.JTextField tfedad;
-    private javax.swing.JTextField tfidpaciente;
-    private javax.swing.JTextField tfpaciente;
+    private javax.swing.JTextField tfidcosto;
+    private javax.swing.JTextField tfidcuenta;
+    private javax.swing.JTextField tfidregistro;
     private javax.swing.JTextField tfregistroid;
-    private javax.swing.JTextField tfsexo;
-    private javax.swing.JTextField tftelefono;
-    private javax.swing.JTextField tftrasladoid;
     // End of variables declaration//GEN-END:variables
 }

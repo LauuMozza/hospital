@@ -5,41 +5,24 @@
  */
 package hospital_bd;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author almas
+ * @author LESLY
  */
-public class gastos extends javax.swing.JFrame {
+public class listapaciente extends javax.swing.JFrame {
 
-    public gastos() {
-
+    /**
+     * Creates new form listapaciente
+     */
+    public listapaciente() {
         initComponents();
-
-           consultar();
-         
-         Dimension tamPantalla= Toolkit.getDefaultToolkit().getScreenSize(); 
-Dimension tamFrame = this.getSize(); 
-        if (tamFrame .height > tamPantalla.height) 
-tamFrame .height = tamPantalla.height; 
-if (tamFrame .width > tamPantalla.width) 
-tamFrame .width = tamPantalla.width; 
-this.setLocation((tamPantalla.width - tamFrame .width) / 2, (tamPantalla.height - tamFrame .height) / 2); 
-this.setVisible(true); 
-    
-
     }
 
     /**
@@ -51,78 +34,83 @@ this.setVisible(true);
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Id Paciente", "Nombre", "Telefono", "Edad", "Direccion", "Sexo", "Registro_idregistro", "Traslado_idTraslado"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 30, 470, 460);
 
         jButton1.setText("Agregar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(210, 500, 79, 40);
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(128, 128, 128))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addGap(0, 15, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           AgregarCUENTA ac = new AgregarCUENTA();
-           ac.setVisible(true);
- 
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-  
-  
-     public void consultar(){
+public void consultar(){
     
         int sw=0;
         
         try{
-        
+     
          Connection con;//conecta los datos a la base de datos.
          PreparedStatement stmt;//traduce las cadenas para mandarlas a la base de datos
          ResultSet tabla;
-         con= DB.getConnection();
+         con=DB.getConnection();
          
          
+   
      
       
-      String sql=" select * from paciente " ;
-            
-
+      String sql=" select * from pacientes " ;
+      
+      
            stmt=con.prepareStatement(sql);
            System.out.println(sql);
            
            tabla=stmt.executeQuery();
-       
            
            while (tabla.next()) // 
            {
                
-         
-           sw=1;
+               sw=1;
+               System.out.println(tabla.getString(2));
+                System.out.println(tabla.getString(3));
+                 System.out.println(tabla.getString(4));
               
-               DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-               model.addRow(new Object [] {  tabla.getString(2), tabla.getString(3), tabla.getString(4), tabla.getString(5), tabla.getString(6), tabla.getString(7), tabla.getString(8)});
-               
            }
          
            
@@ -139,6 +127,7 @@ this.setVisible(true);
         }
     
     }
+    
     
     /**
      * @param args the command line arguments
@@ -157,30 +146,27 @@ this.setVisible(true);
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(gastos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listapaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(gastos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listapaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(gastos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listapaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(gastos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listapaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new gastos().setVisible(true);
+                new listapaciente().setVisible(true);
             }
         });
-        
-
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }
