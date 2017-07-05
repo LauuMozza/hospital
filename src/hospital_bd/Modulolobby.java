@@ -84,15 +84,15 @@ public class Modulolobby extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-<<<<<<< HEAD
+
         paciente lobby = new paciente();
         lobby.setVisible(true);        
-=======
+
         this.dispose();
         paciente p = new paciente();
         p.setVisible(true);
         p.setLocationRelativeTo(null);
->>>>>>> 21ddd608a2a3605ca01c1b370457b8dd83a0640c
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

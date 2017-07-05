@@ -5,11 +5,14 @@
  */
 package hospital_bd;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -21,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class gastos extends javax.swing.JFrame {
 
-     ArrayList<paciente> lista = new ArrayList<paciente> ();
+     ArrayList<gastos1> lista = new ArrayList<gastos1> ();
     /**
      * Creates new form Muestra_paciente
      */
@@ -30,24 +33,24 @@ public class gastos extends javax.swing.JFrame {
      String idcuenta ="";
      String idregistro ="";
      String costotoal ="";
+     String registroid ="";
     public gastos() {
          
         initComponents();
-        
-        jTable1.addMouseListener(new MouseAdapter() {
+           consultar();
+         
+         Dimension tamPantalla= Toolkit.getDefaultToolkit().getScreenSize(); 
+Dimension tamFrame = this.getSize(); 
+        if (tamFrame .height > tamPantalla.height) 
+tamFrame .height = tamPantalla.height; 
+if (tamFrame .width > tamPantalla.width) 
+tamFrame .width = tamPantalla.width; 
+this.setLocation((tamPantalla.width - tamFrame .width) / 2, (tamPantalla.height - tamFrame .height) / 2); 
+this.setVisible(true); 
+     
             
-            DefaultTableModel model =new DefaultTableModel();
             
-            public void mouseClicked (MouseEvent e){
-                int i = jTable1.getSelectedRow();
-                idcuenta=(jTable1.getValueAt(i, 0).toString());
-                idregistro=(jTable1.getValueAt(i,1).toString());
-                costotoal=(jTable1.getValueAt(i,2).toString());
-            }
-            
-            
-});
-        
+    
     }
 
     /**
@@ -59,183 +62,106 @@ public class gastos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        tfidcuenta = new javax.swing.JTextField();
-        tfidregistro = new javax.swing.JTextField();
-        tfcostototal = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        btneliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setText("ID Cuenta paciente");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(21, 88, 130, 16);
-
-        jLabel2.setText("Id registro");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 140, 130, 16);
-
-        jLabel3.setText("Costo total");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 190, 61, 16);
-
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Id cuenta paciente", "Id registr", "Costo total"
+                "Id Paciente", "Nombre", "Telefono", "Edad", "Direccion", "Sexo", "Registro_idregistro", "Traslado_idTraslado"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(30, 330, 452, 160);
-        getContentPane().add(tfidcuenta);
-        tfidcuenta.setBounds(170, 90, 190, 22);
-        getContentPane().add(tfidregistro);
-        tfidregistro.setBounds(170, 140, 190, 22);
-        getContentPane().add(tfcostototal);
-        tfcostototal.setBounds(170, 190, 190, 22);
+        jScrollPane1.setBounds(10, 30, 470, 460);
 
-        jLabel4.setText("Cuenta");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(210, 20, 120, 20);
-
-        jButton1.setText("Mostrar");
+        jButton1.setText("Agregar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(140, 260, 77, 40);
-
-        btneliminar.setText("Eliminar");
-        btneliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btneliminarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btneliminar);
-        btneliminar.setBounds(270, 260, 80, 40);
+        jButton1.setBounds(210, 500, 79, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
-      paciente u = new paciente (tfidcuenta.getText(), tfidregistro.getText(), tfcostototal.getText() );
-        lista.add(u);
-        
-        mostrar ();
-        tfidcuenta.setText("");
-        tfidregistro.setText("");
-        tfcostototal.setText("");
+           AgregarCUENTA ac = new AgregarCUENTA();
+           ac.setVisible(true);
+ 
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
-      
-        for (int i = 0; i < lista.size(); i++) {
-            if (idcuenta== lista.get(i).getIDCUENTAPAICNETE()) {
-                lista.remove(i);
-                
-                
-            }
-        }
-   String matriz[][] = new String [lista.size()][3];
-        
-        for (int i = 0; i < lista.size(); i++) {
-            matriz[i][0]=lista.get(i).getIDCUENTAPAICNETE();
-            matriz[i][1]=lista.get(i).getIDREGISTRO();
-            matriz[i][2]=lista.get(i).getCOSTOTOTAL();
-            
-        }
-        
-    
-    jTable1.setModel(new javax.swing.table.DefaultTableModel(
-         matriz,
-            new String [] {
-                "Id cuenta paciente", "Id registr", "Costo total"
-            }
-        ));
-                                    
-        
-    }//GEN-LAST:event_btneliminarActionPerformed
 
     public void mostrar(){
         
-        String matriz[][] = new String [lista.size()][3];
-        
-        for (int i = 0; i < lista.size(); i++) {
-            matriz[i][0]=lista.get(i).getIDCUENTAPAICNETE();
-            matriz[i][1]=lista.get(i).getIDREGISTRO();
-            matriz[i][2]=lista.get(i).getCOSTOTOTAL();
-            
-        }
-        
-    
-    jTable1.setModel(new javax.swing.table.DefaultTableModel(
-         matriz,
-            new String [] {
-                "Id cuenta paciente", "Id registr", "Costo total"
-            }
-        ));
+      
     }
-
+  
+     public void consultar(){
     
-    
-    public void modificar(){
-    
-    try{
-         Class.forName("com.mysql.jdbc.Driver");
-         String cadena="jdbc:mysql://localhost/prueba?user=root&password=12345678";
-         Connection con;
-         PreparedStatement stmt;
-       
-         con= DriverManager.getConnection(cadena);
-     String  idcuental=tfidcuenta.getText();
-      String idregistro=tfidregistro.getText();
-      String costototal=tfcostototal.getText();
-   
-      
-      String sql="update editorial set ";
-      
+        int sw=0;
+        
+        try{
+        
+         Connection con;//conecta los datos a la base de datos.
+         PreparedStatement stmt;//traduce las cadenas para mandarlas a la base de datos
+         ResultSet tabla;
+         con= DB.getConnection();
          
-           sql += "nombre = " +"\""+ idregistro + "\", ";
-
-           sql += "contacto = " +"\""+ costototal + "\"" + " where id_editorial =" + idcuenta + " ; ";
          
-             JOptionPane.showMessageDialog(null, sql);
+     
+      
+      String sql=" select * from paciente " ;
+            
+      
+            
+         
+            
            stmt=con.prepareStatement(sql);
-           int sw= stmt.executeUpdate();
-           if(sw!=0){
-               JOptionPane.showMessageDialog(null, "Registro Modificado");
+           System.out.println(sql);
+           
+           tabla=stmt.executeQuery();
+           
+           
+           
+        
+              
+           
+           while (tabla.next()) // 
+           {
+               
+         
+           sw=1;
+              
+               DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+               model.addRow(new Object [] {  tabla.getString(2), tabla.getString(3), tabla.getString(4), tabla.getString(5), tabla.getString(6), tabla.getString(7), tabla.getString(8)});
+               
+           }
+         
            
            }
-         }catch(ClassNotFoundException e){
-         JOptionPane.showMessageDialog(null, e);
-     }
-     catch(SQLException e1){
-         JOptionPane.showMessageDialog(null, e1);
-     }
-     catch(Exception e2){
-         JOptionPane.showMessageDialog(null, e2);
-     }
-         
-    
+           catch(SQLException e1){
+           JOptionPane.showMessageDialog(null, e1);
+           }
+          catch(Exception e2){
+          JOptionPane.showMessageDialog(null, e2);
+           }
+        
+        if (sw==0) {
+              JOptionPane.showMessageDialog(null, "***no existe el registro*** ");
+        }
     
     }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -270,19 +196,13 @@ public class gastos extends javax.swing.JFrame {
                 new gastos().setVisible(true);
             }
         });
+        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btneliminar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField tfcostototal;
-    private javax.swing.JTextField tfidcuenta;
-    private javax.swing.JTextField tfidregistro;
     // End of variables declaration//GEN-END:variables
 }
