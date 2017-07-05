@@ -41,11 +41,11 @@ public class MenuFinanzas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(51, 135, 252, 186);
+        jButton1.setBounds(150, 170, 252, 186);
 
         jButton2.setText("Gasto de hospital");
         getContentPane().add(jButton2);
-        jButton2.setBounds(321, 135, 237, 186);
+        jButton2.setBounds(420, 170, 237, 186);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
