@@ -50,11 +50,14 @@ public class Registro extends javax.swing.JInternalFrame {
 
         getContentPane().setLayout(null);
 
-        jLabel1.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("Id registro");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(40, 70, 81, 26);
 
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setText("Id paciente ");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(40, 100, 90, 30);
