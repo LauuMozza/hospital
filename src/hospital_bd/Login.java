@@ -16,20 +16,22 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
-        
         this.setOpacity(0.7f);
         this.setSize(800, 600);
         int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
         int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
-        Dimension tamPantalla= Toolkit.getDefaultToolkit().getScreenSize(); 
-Dimension tamFrame = this.getSize(); 
-        if (tamFrame .height > tamPantalla.height) 
-tamFrame .height = tamPantalla.height; 
-if (tamFrame .width > tamPantalla.width) 
-tamFrame .width = tamPantalla.width; 
-this.setLocation((tamPantalla.width - tamFrame .width) / 2, (tamPantalla.height - tamFrame .height) / 2); 
-this.setVisible(true); 
+        Dimension tamPantalla = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension tamFrame = this.getSize();
+        if (tamFrame.height > tamPantalla.height) {
+            tamFrame.height = tamPantalla.height;
+        }
+        if (tamFrame.width > tamPantalla.width) {
+            tamFrame.width = tamPantalla.width;
+        }
+        this.setLocation((tamPantalla.width - tamFrame.width) / 2, (tamPantalla.height - tamFrame.height) / 2);
+        this.setVisible(true);
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -88,9 +90,15 @@ this.setVisible(true);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String user = user_1.getText();
-        String pass = pass_1.getText();      
-        consult(user,pass);
+        //Consulta a base de datos
+        //String user = user_1.getText();
+        //String pass = pass_1.getText();
+        //consult(user, pass);
+
+        //Entrada Directa
+        MenuFinanzas n = new MenuFinanzas();
+        n.setVisible(true);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void user_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_1ActionPerformed
@@ -101,8 +109,7 @@ this.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_pass_1ActionPerformed
 
-
-   public static void main(String args[]) {
+    public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -140,72 +147,69 @@ this.setVisible(true);
     private javax.swing.JTextField user_1;
     // End of variables declaration//GEN-END:variables
 
-    
-    
-private void connect_and_catch(String sql,String mensaje) {
-        try{            
+    private void connect_and_catch(String sql, String mensaje) {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             String cadena = "jdbc:mysql://127.0.0.1/Hospital?user=richi&password=12345";
             Connection con = (Connection) DriverManager.getConnection(cadena);
-            PreparedStatement stmt = null;            
-            stmt=con.prepareStatement(sql);
-            int sw=stmt.executeUpdate();            
-            if(sw!=0){
-                JOptionPane.showMessageDialog(null,mensaje);
+            PreparedStatement stmt = null;
+            stmt = con.prepareStatement(sql);
+            int sw = stmt.executeUpdate();
+            if (sw != 0) {
+                JOptionPane.showMessageDialog(null, mensaje);
                 this.dispose();
-            }                        
-        }catch(ClassNotFoundException e1){
-            JOptionPane.showMessageDialog(null,e1);
-        }catch(SQLException e2){
-            JOptionPane.showMessageDialog(null,e2);
-        }catch(Exception e3){
-            JOptionPane.showMessageDialog(null,e3);
-        }    
+            }
+        } catch (ClassNotFoundException e1) {
+            JOptionPane.showMessageDialog(null, e1);
+        } catch (SQLException e2) {
+            JOptionPane.showMessageDialog(null, e2);
+        } catch (Exception e3) {
+            JOptionPane.showMessageDialog(null, e3);
+        }
     }
-    
-    private void consult(String acc, String pass){
+
+    private void consult(String acc, String pass) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String cadena = "jdbc:mysql://192.168.43.245/hospital";
-            Connection con = (Connection) DriverManager.getConnection(cadena,"richi","123456");
+            Connection con = (Connection) DriverManager.getConnection(cadena, "richi", "123456");
             PreparedStatement stmt = null;
             ResultSet table;
             String sql = "select * from usuarios";
             stmt = con.prepareStatement(sql);
             table = stmt.executeQuery();
-            
-         boolean coun=false;
-         while(table.next()){
-         String c_acc = table.getString(2);
-         String c_pass = table.getString(8);
-          if (c_acc.equals(acc)) {
-          System.out.println("Usuarios encontrado");
-                    
-                   if (c_pass.equals(pass)) {
-                  System.out.println("Conseder loggin");
-                  
-                  NewJFrame n=new NewJFrame();
-                  n.setVisible(true);
-                  
-                        
-                  break;
-                  }else{
-                    
-                  System.out.println("Contraseña incorrecta");
-                  break;
-                  }
-                    
-                  }else{
-                  coun=true;
-                  }
-                  }
-                 if (coun) {
-                  System.out.println("Usuario no valido");
 
-                  }
-                  } catch (ClassNotFoundException ex) {
-                  Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                  } catch (SQLException ex) {
+            boolean coun = false;
+            while (table.next()) {
+                String c_acc = table.getString(2);
+                String c_pass = table.getString(8);
+                if (c_acc.equals(acc)) {
+                    System.out.println("Usuarios encontrado");
+
+                    if (c_pass.equals(pass)) {
+                        System.out.println("Conseder loggin");
+
+                        Menu n = new Menu();
+                        n.setVisible(true);
+
+                        break;
+                    } else {
+
+                        System.out.println("Contraseña incorrecta");
+                        break;
+                    }
+
+                } else {
+                    coun = true;
+                }
+            }
+            if (coun) {
+                System.out.println("Usuario no valido");
+
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
