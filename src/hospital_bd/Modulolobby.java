@@ -82,7 +82,8 @@ public class Modulolobby extends javax.swing.JFrame {
         this.dispose();
         paciente p = new paciente();
         p.setVisible(true);
-    
+        p.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
