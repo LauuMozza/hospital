@@ -199,11 +199,11 @@ public class paciente1 extends javax.swing.JInternalFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(36, 36, 36)
                 .addComponent(btn2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn3)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,12 +228,12 @@ public class paciente1 extends javax.swing.JInternalFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+        jPanel4.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
         jPanel4.add(txtnomimagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 230, 30));
 
         lblfoto.setBackground(new java.awt.Color(153, 153, 153));
         lblfoto.setForeground(new java.awt.Color(153, 153, 153));
-        jPanel4.add(lblfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 150, 208));
+        jPanel4.add(lblfoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 150, 208));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 240, 340));
 

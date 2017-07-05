@@ -50,37 +50,38 @@ public class Registro extends javax.swing.JInternalFrame {
 
         getContentPane().setLayout(null);
 
+        jLabel1.setForeground(new java.awt.Color(0, 102, 204));
         jLabel1.setText("Id registro");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(12, 59, 81, 26);
+        jLabel1.setBounds(40, 70, 81, 26);
 
         jLabel2.setText("Id paciente ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 100, 90, 30);
+        jLabel2.setBounds(40, 100, 90, 30);
 
         jLabel3.setText("Id traslado ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 150, 70, 20);
+        jLabel3.setBounds(40, 140, 70, 20);
 
         jLabel4.setText("Id estancia ");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 190, 90, 30);
+        jLabel4.setBounds(190, 200, 90, 30);
 
         jLabel5.setText("Id listamedicos");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 220, 120, 50);
+        jLabel5.setBounds(190, 230, 120, 50);
 
         jLabel6.setText("Fecha alta");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(10, 270, 80, 30);
+        jLabel6.setBounds(190, 280, 80, 30);
 
         jLabel7.setText("Fecha baja");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(10, 310, 80, 40);
+        jLabel7.setBounds(190, 320, 80, 40);
 
         jLabel8.setText("Urgencia");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(10, 360, 80, 30);
+        jLabel8.setBounds(190, 370, 80, 30);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,21 +89,21 @@ public class Registro extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(140, 60, 200, 30);
+        jTextField1.setBounds(320, 70, 200, 30);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(140, 100, 200, 30);
+        jTextField2.setBounds(320, 110, 200, 30);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(140, 150, 200, 30);
+        jTextField3.setBounds(320, 160, 200, 30);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(140, 190, 200, 30);
+        jTextField4.setBounds(320, 200, 200, 30);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(140, 230, 200, 30);
+        jTextField5.setBounds(320, 240, 200, 30);
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(140, 270, 200, 30);
+        jTextField6.setBounds(320, 280, 200, 30);
         getContentPane().add(jTextField7);
-        jTextField7.setBounds(140, 310, 200, 30);
+        jTextField7.setBounds(320, 320, 200, 30);
         getContentPane().add(jTextField8);
-        jTextField8.setBounds(140, 360, 200, 30);
+        jTextField8.setBounds(320, 370, 200, 30);
 
         jButton1.setText("Nuevo");
         getContentPane().add(jButton1);
