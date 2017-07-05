@@ -151,9 +151,7 @@ public class superpaciente extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton4)
-                        .addGap(126, 126, 126)
+                        .addGap(271, 271, 271)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -169,15 +167,18 @@ public class superpaciente extends javax.swing.JFrame {
                             .addComponent(tf_sexo)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(224, 224, 224)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton4)))
                 .addContainerGap(273, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(32, 32, 32)
                 .addComponent(jButton4)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -281,24 +282,23 @@ public class superpaciente extends javax.swing.JFrame {
     }//GEN-LAST:event_tf_sexoActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        
-        
+nuevo();        
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+modificar();        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        
+grabar();        
         
         
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      Modulolobby jj=new  Modulolobby();
-      jj.setVisible(true);
+  //    Modulolobby jj=new  Modulolobby();
+     // jj.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 public void nuevo(){
          
@@ -330,14 +330,14 @@ public void nuevo(){
       
       
       
-      String sql="  insert into paciente values(";
+      String sql="  insert into paciente values (";
       
-       sql += "\""+tf_nombre +"\""+ ","  +"\""+tf_telefono+"\""+",";
-       sql += "\""+tf_edad+ "\""+","+"\""+tf_direccion+"\""+",";
+       sql += "\""+nombre +"\""+ ","  +"\""+telefono+"\""+",";
+       sql += "\""+edad+ "\""+","+"\""+direccion+"\""+",";
     
-        sql += "\""+tf_sexo+"\""+")";
+        sql += "\""+sexo+"\""+")";
         
-        
+         System.out.println(sql);
        JOptionPane.showMessageDialog(null,sql);
       stmt=con.prepareStatement(sql);
       int sw=stmt.executeUpdate();
