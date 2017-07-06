@@ -1,0 +1,375 @@
+[33mcommit a90be12a099abb5777dc27cad57efa2722c83dae[m
+Merge: e4c1f86 063348c
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 23:49:18 2017 -0500
+
+    ultimo
+
+[33mcommit e4c1f8614dfae9d2495919dbd71259c37138c4f0[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 23:48:44 2017 -0500
+
+    ultimo
+
+[33mcommit 063348c4b010323b390ff2a3749f875a74309f50[m
+Merge: c29f811 9e75328
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Wed Jul 5 18:22:07 2017 -0500
+
+    modulo finanzas
+
+[33mcommit c29f811df7c3bf6e1540cc26199f9c368f231765[m
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Wed Jul 5 05:51:17 2017 -0500
+
+    cambios
+
+[33mcommit 9e75328d39dbd72c3d44f5aab954bd9d641f9162[m
+Merge: 9b92c14 f8f5e5f
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 05:49:31 2017 -0500
+
+    Merged LAura files
+
+[33mcommit 9b92c14ba478c8c6408432e4ea5c17a1f9faeba0[m
+Merge: c5596ce 926016a
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 05:29:15 2017 -0500
+
+    Merged all Changes
+
+[33mcommit f8f5e5f1527ba73ccd754863e4ba6cc45574eaa7[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 05:28:40 2017 -0500
+
+    Actualice perfil paciente codigo
+
+[33mcommit 9061b99bf97b43ebff8eecdf8b9e3bd666fbf9a1[m
+Merge: 413374a 926016a
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 05:14:06 2017 -0500
+
+    Merge branch 'master' of https://github.com/LauuMozza/hospital
+
+[33mcommit 413374ada393c41d6e3e70fbab196dd9d44ea405[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 05:13:54 2017 -0500
+
+    perfil paciente,superpaciente y listapaciente
+
+[33mcommit c5596ce9e67f5125722c7ac0c68677184ae956f5[m
+Merge: 64fc681 ef01ea9
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 05:09:53 2017 -0500
+
+    Added Adrian Changes
+
+[33mcommit 926016a49803eb30102b03e405cc53bdfa550fdb[m
+Merge: 6a1d8df ef01ea9
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Wed Jul 5 05:08:49 2017 -0500
+
+    codigo para que laura haga su parte porque no puede y yo si bitch jajaja
+
+[33mcommit 6a1d8df93682358ffc839e131d37576961ce1948[m
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Wed Jul 5 05:07:00 2017 -0500
+
+    codigo para que laura haga su parte porque no puede y yo si bitch jajaja
+
+[33mcommit 64fc681d804fe177d20fb138a7ddda00aff52a49[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 04:33:05 2017 -0500
+
+    Added Navigation
+
+[33mcommit ef01ea92f32c3eba5e4c8bd5e792c7451297ec15[m
+Author: unknown <Adrian-097@outlook.com>
+Date:   Wed Jul 5 04:27:08 2017 -0500
+
+    usuarios
+
+[33mcommit d3c4503b1710285d92bb6d54e0798b94cb2da303[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 01:58:40 2017 -0500
+
+    de nuez
+
+[33mcommit 0017dbdacfcc6e3dc3cc8734de1509594eb908fb[m
+Merge: efb408e f122ea3
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 01:54:24 2017 -0500
+
+    xd
+
+[33mcommit efb408ebf8a3b902a9786b5a00bc456e9810b860[m
+Merge: 1284b9c cc2555f
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 01:48:49 2017 -0500
+
+    haciendo cambios
+
+[33mcommit f122ea3ed9b396d2e44875d202128937735e6947[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 01:45:08 2017 -0500
+
+    Almost Complete navigation
+
+[33mcommit 6123e48d640876c21ab92dcd46095aa747d49165[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 01:28:40 2017 -0500
+
+    Merged Success
+
+[33mcommit 098d764b84993eef463a679c71288d9a01c7bef0[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Wed Jul 5 01:28:01 2017 -0500
+
+    Update .gitignore
+
+[33mcommit 3e6a27ff0d3830c40b605a9b88c7514d9841f32e[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Wed Jul 5 01:25:55 2017 -0500
+
+    Update .gitignore
+
+[33mcommit cc2555faa9e3b96c9ee3179d4bda2b71f19ad1aa[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 00:57:51 2017 -0500
+
+    Reverted Changes
+
+[33mcommit 1284b9cba4feaaa3492933effe816f6752c79a34[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 00:57:37 2017 -0500
+
+    table pac
+
+[33mcommit 0b7b23cd65368b1f684049647147809f43e3f03d[m
+Merge: 5163b36 cdce005
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Wed Jul 5 00:44:19 2017 -0500
+
+    yolo
+
+[33mcommit 5163b365e5d3233dc5274ef8402d72ddcf238873[m
+Merge: a072d6c e5e5028
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Wed Jul 5 00:41:27 2017 -0500
+
+    modulo no terminado por culpa de ricardo
+
+[33mcommit cdce005e51c151cbccb7c5ce88a69d6c57ab0ba3[m
+Merge: a87f723 21ddd60
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 00:19:04 2017 -0500
+
+    codigo de pac
+
+[33mcommit a87f7239318db6c944eec7387e1571175cd036d8[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 00:16:26 2017 -0500
+
+    modulo finanzas
+
+[33mcommit 21ddd608a2a3605ca01c1b370457b8dd83a0640c[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 00:16:07 2017 -0500
+
+    Added navigation
+
+[33mcommit d7feb2f78d9f0ef1c3733c3bcc7a3f968219c52c[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Wed Jul 5 00:09:52 2017 -0500
+
+    tabla pacientes codigo
+
+[33mcommit d1b8c21ab5860e9179bf61ee83885e0ef21b6367[m
+Merge: c5fddc9 8a9e991
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Wed Jul 5 00:09:32 2017 -0500
+
+    Added Navigation
+
+[33mcommit c5fddc9d450393d691596eaea36427142ad26e2c[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 23:55:12 2017 -0500
+
+    Modifies ModuloLobby
+
+[33mcommit 8a9e991ecee215d5a66c8e278e76db5e88f6a063[m
+Merge: 4dfac83 1d2f964
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Tue Jul 4 23:50:42 2017 -0500
+
+    modulo finanzas
+
+[33mcommit 4dfac83940467eb7f4a23de128bd206c62dab710[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Tue Jul 4 23:47:29 2017 -0500
+
+    tabla pacientes
+
+[33mcommit 1d2f9648887e5c1ec6a0ba6ca886f8f3a75129ad[m
+Merge: ab70d12 84b170d
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 23:45:32 2017 -0500
+
+    Added navigation
+
+[33mcommit ab70d129864fcc3c9b1da250416d9863b519c8dd[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 22:51:47 2017 -0500
+
+    Added function for MenuFinanzas
+
+[33mcommit 84b170db963f433c79a9333f3ab43b270876912b[m
+Author: unknown <Adrian-097@outlook.com>
+Date:   Tue Jul 4 21:48:52 2017 -0500
+
+    login
+
+[33mcommit a072d6cd81ea9b86727141ff457c305329d3214d[m
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Tue Jul 4 21:07:38 2017 -0500
+
+    tabla registro
+
+[33mcommit e5e5028f09ca5ea012bc420641581e8c9c365a8f[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 21:05:43 2017 -0500
+
+    Change link from login to MenUFinanzas
+
+[33mcommit 81829b071ab9a5d8b52e9389ccb159267f29d1f8[m
+Merge: b00b04b 3c35f9a
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 20:35:05 2017 -0500
+
+    Merged all changes
+
+[33mcommit b00b04b82106aa7fad77a93646d585cb88f51963[m
+Merge: f48ead1 3661416
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 20:26:40 2017 -0500
+
+    Merge branch 'rich' into laura
+
+[33mcommit f48ead138eeede718646a6320c40aec70a0ca523[m
+Merge: d26713a 8766de9
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 20:26:33 2017 -0500
+
+    Laura changes
+
+[33mcommit 366141642a9b4ce5c21634b7e94147b7afc10737[m
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 20:19:10 2017 -0500
+
+    Success pull
+
+[33mcommit 8766de9f1d7a2ac839937f00d9c5b1b25ae1872c[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Tue Jul 4 20:18:47 2017 -0500
+
+    modulo finanzas
+
+[33mcommit 3c35f9a207df79c868b856a5c53590aa7552aec1[m
+Merge: d26713a 81bebd4
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 20:00:22 2017 -0500
+
+    Changes Alma
+
+[33mcommit d26713a9b765ff9ca509516c86088a4b5e8a5bec[m
+Merge: a7159be 61f7dd5
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 19:59:12 2017 -0500
+
+    Changes laura
+
+[33mcommit a7159be98a0ba8e97209d296c7edf86b23f72d63[m
+Merge: 8f3d7cc 7209976
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 19:57:49 2017 -0500
+
+    Success
+
+[33mcommit 8f3d7cc7a4fde7f7d65c93e1e398543a87674523[m
+Merge: 1436c7d 3ee3832
+Author: RichDi <drdr_2@hotmail.com>
+Date:   Tue Jul 4 19:52:38 2017 -0500
+
+    Merge branch 'rich' of https://github.com/LauuMozza/hospital into rich
+
+[33mcommit 24251ebb63fcae3b024fe36e5852f930f42632e2[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Thu Jun 29 19:36:36 2017 -0500
+
+    holi
+
+[33mcommit 61f7dd5a418b0c5b7aa918252c305e30140a0846[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Thu Jun 29 19:34:08 2017 -0500
+
+    Create .gitignore
+
+[33mcommit 3ee3832cc0cc3a499af75600261ff539f08d75a3[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Thu Jun 29 19:33:46 2017 -0500
+
+    Create .gitignore
+
+[33mcommit 72099764b39ebe286fb32c161d88a811d20fcb53[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Thu Jun 29 19:33:27 2017 -0500
+
+    Create .gitignore
+
+[33mcommit 81bebd489358c46aabe18cb9b3a87f0a37100c9e[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Thu Jun 29 19:33:09 2017 -0500
+
+    Create .gitignore
+
+[33mcommit 1436c7d6482250fa410dac6f1b684e1b8769ba18[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Thu Jun 29 19:32:20 2017 -0500
+
+    Create .gitignore
+
+[33mcommit e40b0346a070d925bfa2097e2d7fd4106a8a1cc4[m
+Author: Ricardo Delgado <drdr_2@hotmail.com>
+Date:   Thu Jun 29 19:29:41 2017 -0500
+
+    Create README.md
+
+[33mcommit 3c533145a92aadacd62bce4153d7ea0fd2fe1d1e[m
+Author: Ricardo Delgado <RichDi>
+Date:   Thu Jun 29 19:20:31 2017 -0500
+
+    Inicializado Proyecto@
+
+[33mcommit ab34b0b0c184fa031b6fbddb23d7a8e7e8640bbc[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Thu Jun 29 19:10:04 2017 -0500
+
+    mudulos finanzas y farmacia
+
+[33mcommit ef01f9712ff78afd8541c956f174a271e2da2ccb[m
+Author: ALMA RAMIREZ <ALMA RAMIREZ>
+Date:   Thu Jun 29 19:05:56 2017 -0500
+
+     agregar las tablas
+
+[33mcommit 2fa9f80b66a92e62e572f297a30edd308206f513[m
+Author: unknown <Adrian-097@outlook.com>
+Date:   Thu Jun 29 19:05:20 2017 -0500
+
+    creado login
+
+[33mcommit eb02da0dedd31a71632f0e81d0847eedada8838f[m
+Author: Lesly A. Cruz Mtz <Lesly A. Cruz Mtz>
+Date:   Thu Jun 29 16:15:32 2017 -0500
+
+    mi primer commit
