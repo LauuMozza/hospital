@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hospital_bd;
 
 import java.sql.Connection;
@@ -17,10 +13,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author LESLY
- */
+
 public class Perfilpaciente extends javax.swing.JFrame {
 
     /**
@@ -132,7 +125,7 @@ public class Perfilpaciente extends javax.swing.JFrame {
                 btn1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, -1, -1));
+        getContentPane().add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
 
         btn2.setText("Agregar medico");
         btn2.addActionListener(new java.awt.event.ActionListener() {
@@ -140,10 +133,10 @@ public class Perfilpaciente extends javax.swing.JFrame {
                 btn2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, -1, -1));
+        getContentPane().add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, -1, -1));
 
         btn3.setText("Agregar medicamentos");
-        getContentPane().add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, -1, -1));
+        getContentPane().add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, -1, -1));
 
         btn4.setText("Agregar tratamientos");
         btn4.addActionListener(new java.awt.event.ActionListener() {
@@ -151,10 +144,10 @@ public class Perfilpaciente extends javax.swing.JFrame {
                 btn4ActionPerformed(evt);
             }
         });
-        getContentPane().add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, -1, -1));
+        getContentPane().add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 490, -1, -1));
 
         jLabel1.setText("Tratamientos");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, -1, -1));
 
         l1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -166,7 +159,7 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(l1);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 326, 118, 146));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 170, 146));
 
         l2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -178,7 +171,7 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(l2);
 
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 326, 140, 146));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 170, 146));
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -190,7 +183,7 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane6.setViewportView(jTable4);
 
-        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 170, 146));
+        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 170, 146));
 
         l4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -202,16 +195,16 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane7.setViewportView(l4);
 
-        getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 160, 146));
+        getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 160, 146));
 
         jLabel10.setText("Visitas");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 294, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
 
         jLabel11.setText("Medicos");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, -1, -1));
 
         jLabel12.setText("Medicamentos");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
