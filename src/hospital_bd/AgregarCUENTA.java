@@ -74,9 +74,9 @@ public class AgregarCUENTA extends javax.swing.JFrame {
         getContentPane().add(tftelefono);
         tftelefono.setBounds(170, 190, 190, 22);
 
-        jLabel4.setText("Cuenta");
+        jLabel4.setText("Paciente");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(210, 20, 120, 20);
+        jLabel4.setBounds(220, 30, 120, 20);
 
         jLabel5.setText("Edad");
         getContentPane().add(jLabel5);
@@ -94,6 +94,11 @@ public class AgregarCUENTA extends javax.swing.JFrame {
         jButton1.setBounds(100, 460, 67, 25);
 
         jButton2.setText("Eliminar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(250, 460, 79, 25);
 
@@ -115,7 +120,7 @@ public class AgregarCUENTA extends javax.swing.JFrame {
 
         jLabel9.setText("Traslado_id");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(20, 400, 67, 16);
+        jLabel9.setBounds(20, 410, 67, 16);
         getContentPane().add(tfregistroid);
         tfregistroid.setBounds(170, 360, 190, 22);
         getContentPane().add(tftrasladoid);
@@ -127,6 +132,10 @@ public class AgregarCUENTA extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        grabar ();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        borrar ();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
      public void grabar(){
               try  {    
@@ -174,6 +183,50 @@ public class AgregarCUENTA extends javax.swing.JFrame {
     
     
     }
+     
+     
+       
+    public void borrar(){
+     try{
+        
+        
+         Class.forName("com.mysql.jdbc.Driver");
+         String cadena="jdbc:mysql://localhost/prueba?user=root&password=12345678";
+         Connection con;
+         PreparedStatement stmt;
+         con= DriverManager.getConnection(cadena);
+         //ResultSet autores;
+         
+ 
+      
+      String sql="delete from paciente where idPaciente="  ;
+      
+        sql+="\""+tfidpaciente.getText()+"\";";
+    
+         
+     
+           
+           JOptionPane.showMessageDialog(null, sql);
+           stmt=con.prepareStatement(sql);
+           int sw= stmt.executeUpdate();
+           
+           
+           
+          if(sw!=0){
+          JOptionPane.showMessageDialog(null, "Registro borrado");
+               
+          }
+          }catch(ClassNotFoundException e){
+          JOptionPane.showMessageDialog(null, e);
+          }
+         catch(SQLException e1){
+         JOptionPane.showMessageDialog(null, e1);
+          }
+         catch(Exception e2){
+         JOptionPane.showMessageDialog(null, e2);
+         }
+    }
+    
     /**
      * @param args the command line arguments
      */

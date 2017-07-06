@@ -2,32 +2,25 @@
 package hospital_bd;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import javax.swing.DefaultListModel;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
 
 public class Perfilpaciente extends javax.swing.JFrame {
+=======
+/**
+ *
+ * @author drdr_
+ */
+public class PerfilPacientes extends javax.swing.JFrame {
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
 
     /**
-     * Creates new form Perfilpaciente
+     * Creates new form PerfilPacientes
      */
-      ResultSet rs;
-    ResultSetMetaData rsm;
-    DefaultTableModel dtm;
-    public Perfilpaciente() {
-      
+    public PerfilPacientes() {
         initComponents();
-       
-   
-        
     }
 
     /**
@@ -67,57 +60,46 @@ public class Perfilpaciente extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setText("Dirección:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 168, -1, -1));
 
         jLabel6.setText("Sexo:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 203, -1, -1));
 
         tf_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_nombreActionPerformed(evt);
             }
         });
-        getContentPane().add(tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 44, 179, -1));
 
         tf_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_telefonoActionPerformed(evt);
             }
         });
-        getContentPane().add(tf_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 82, 179, -1));
 
         tf_edad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_edadActionPerformed(evt);
             }
         });
-        getContentPane().add(tf_edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 124, 179, -1));
 
         jLabel2.setText("Nombre:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 47, -1, -1));
 
         tf_direccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_direccionActionPerformed(evt);
             }
         });
-        getContentPane().add(tf_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 162, 179, -1));
 
         jLabel3.setText("Teléfono:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 85, -1, -1));
 
         tf_sexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tf_sexoActionPerformed(evt);
             }
         });
-        getContentPane().add(tf_sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 200, 179, -1));
 
         jLabel4.setText("Edad:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 127, -1, -1));
 
         btn1.setText("Agregar visita");
         btn1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +107,10 @@ public class Perfilpaciente extends javax.swing.JFrame {
                 btn1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
         getContentPane().add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
+=======
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
 
         btn2.setText("Agregar medico");
         btn2.addActionListener(new java.awt.event.ActionListener() {
@@ -133,10 +118,15 @@ public class Perfilpaciente extends javax.swing.JFrame {
                 btn2ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
         getContentPane().add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, -1, -1));
 
         btn3.setText("Agregar medicamentos");
         getContentPane().add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, -1, -1));
+=======
+
+        btn3.setText("Agregar medicamentos");
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
 
         btn4.setText("Agregar tratamientos");
         btn4.addActionListener(new java.awt.event.ActionListener() {
@@ -144,10 +134,15 @@ public class Perfilpaciente extends javax.swing.JFrame {
                 btn4ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
         getContentPane().add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 490, -1, -1));
 
         jLabel1.setText("Tratamientos");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, -1, -1));
+=======
+
+        jLabel1.setText("Tratamientos");
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
 
         l1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -159,8 +154,11 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(l1);
 
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 170, 146));
 
+=======
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
         l2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -171,8 +169,11 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(l2);
 
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
         getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 170, 146));
 
+=======
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -183,8 +184,11 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane6.setViewportView(jTable4);
 
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
         getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 170, 146));
 
+=======
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
         l4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -195,6 +199,7 @@ public class Perfilpaciente extends javax.swing.JFrame {
         ));
         jScrollPane7.setViewportView(l4);
 
+<<<<<<< HEAD:src/hospital_bd/Perfilpaciente.java
         getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 160, 146));
 
         jLabel10.setText("Visitas");
@@ -205,6 +210,140 @@ public class Perfilpaciente extends javax.swing.JFrame {
 
         jLabel12.setText("Medicamentos");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, -1, -1));
+=======
+        jLabel10.setText("Visitas");
+
+        jLabel11.setText("Medicos");
+
+        jLabel12.setText("Medicamentos");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 842, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(219, 219, 219)
+                            .addComponent(jLabel2)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(214, 214, 214)
+                            .addComponent(jLabel3)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(232, 232, 232)
+                            .addComponent(jLabel4)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(213, 213, 213)
+                            .addComponent(jLabel5)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(232, 232, 232)
+                            .addComponent(jLabel6)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addComponent(jLabel10)
+                            .addGap(114, 114, 114)
+                            .addComponent(jLabel11)
+                            .addGap(132, 132, 132)
+                            .addComponent(jLabel12)
+                            .addGap(142, 142, 142)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(24, 24, 24)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(33, 33, 33)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(30, 30, 30)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(15, 15, 15)
+                            .addComponent(btn1)
+                            .addGap(31, 31, 31)
+                            .addComponent(btn2)
+                            .addGap(83, 83, 83)
+                            .addComponent(btn3)
+                            .addGap(47, 47, 47)
+                            .addComponent(btn4)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 526, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(jLabel2))
+                        .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(jLabel3))
+                        .addComponent(tf_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(22, 22, 22)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(jLabel4))
+                        .addComponent(tf_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jLabel5))
+                        .addComponent(tf_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(jLabel6))
+                        .addComponent(tf_sexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(70, 70, 70)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(4, 4, 4)
+                            .addComponent(jLabel10))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel11))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel12))
+                        .addComponent(jLabel1))
+                    .addGap(12, 12, 12)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(4, 4, 4)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(14, 14, 14)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btn1)
+                        .addComponent(btn2)
+                        .addComponent(btn3)
+                        .addComponent(btn4))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+>>>>>>> 063348c4b010323b390ff2a3749f875a74309f50:src/hospital_bd/PerfilPacientes.java
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -219,7 +358,6 @@ public class Perfilpaciente extends javax.swing.JFrame {
             tf_telefono.requestFocusInWindow();
 
         }
-
     }//GEN-LAST:event_tf_nombreActionPerformed
 
     private void tf_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_telefonoActionPerformed
@@ -232,7 +370,6 @@ public class Perfilpaciente extends javax.swing.JFrame {
             tf_edad.requestFocusInWindow();
 
         }
-
     }//GEN-LAST:event_tf_telefonoActionPerformed
 
     private void tf_edadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_edadActionPerformed
@@ -245,7 +382,6 @@ public class Perfilpaciente extends javax.swing.JFrame {
             tf_direccion.requestFocusInWindow();
 
         }
-
     }//GEN-LAST:event_tf_edadActionPerformed
 
     private void tf_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_direccionActionPerformed
@@ -258,7 +394,6 @@ public class Perfilpaciente extends javax.swing.JFrame {
             tf_sexo.requestFocusInWindow();
 
         }
-
     }//GEN-LAST:event_tf_direccionActionPerformed
 
     private void tf_sexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_sexoActionPerformed
@@ -271,108 +406,18 @@ public class Perfilpaciente extends javax.swing.JFrame {
             btn1.requestFocusInWindow();
 
         }
-
     }//GEN-LAST:event_tf_sexoActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-    try {
-            
-             Class.forName("com.mysql.jdbc.Driver");
-       String cadena ="jdbc:mysql://localhost/hospital?user=root&password=12345678";
-       Connection con= DriverManager.getConnection(cadena);
-      PreparedStatement stmt=null;
-      stmt=con.prepareStatement("select idVisitas, nombre from visitas");
-      rs=stmt.executeQuery();
-      rsm=rs.getMetaData();
-      ArrayList<Object[]> data=new ArrayList <>();
-      while(rs.next()){
-      Object[] rows=new Object[rsm.getColumnCount()];      
-      
-          for (int i = 0; i < rows.length; i++) {
-              rows[i]=rs.getObject(i+1);
-          }
-          
-          data.add(rows);
-          
-          
-      }
-      
-      dtm=(DefaultTableModel)this.l1.getModel();
-            for (int i = 0; i < data.size(); i++) {
-                dtm.addRow(data.get(i));
-            }
-            
-        } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }
+        
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-    try {
-            
-             Class.forName("com.mysql.jdbc.Driver");
-       String cadena ="jdbc:mysql://localhost/hospital?user=root&password=12345678";
-       Connection con= DriverManager.getConnection(cadena);
-      PreparedStatement stmt=null;
-      stmt=con.prepareStatement("select idMedico, especialidad from medicos");
-      rs=stmt.executeQuery();
-      rsm=rs.getMetaData();
-      ArrayList<Object[]> data=new ArrayList <>();
-      while(rs.next()){
-      Object[] rows=new Object[rsm.getColumnCount()];      
-      
-          for (int i = 0; i < rows.length; i++) {
-              rows[i]=rs.getObject(i+1);
-          }
-          
-          data.add(rows);
-          
-          
-      }
-      
-      dtm=(DefaultTableModel)this.l2.getModel();
-            for (int i = 0; i < data.size(); i++) {
-                dtm.addRow(data.get(i));
-            }
-            
-        } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }  
-        
         
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-  try {
-            
-             Class.forName("com.mysql.jdbc.Driver");
-       String cadena ="jdbc:mysql://localhost/hospital?user=root&password=12345678";
-       Connection con= DriverManager.getConnection(cadena);
-      PreparedStatement stmt=null;
-      stmt=con.prepareStatement("select idTratamiento, descripcion from tratamiento");
-      rs=stmt.executeQuery();
-      rsm=rs.getMetaData();
-      ArrayList<Object[]> data=new ArrayList <>();
-      while(rs.next()){
-      Object[] rows=new Object[rsm.getColumnCount()];      
-      
-          for (int i = 0; i < rows.length; i++) {
-              rows[i]=rs.getObject(i+1);
-          }
-          
-          data.add(rows);
-          
-          
-      }
-      
-      dtm=(DefaultTableModel)this.l4.getModel();
-            for (int i = 0; i < data.size(); i++) {
-                dtm.addRow(data.get(i));
-            }
-            
-        } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage());
-        }
+        
     }//GEN-LAST:event_btn4ActionPerformed
 
     /**
@@ -392,20 +437,20 @@ public class Perfilpaciente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Perfilpaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfilPacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Perfilpaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfilPacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Perfilpaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfilPacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Perfilpaciente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfilPacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Perfilpaciente().setVisible(true);
+                new PerfilPacientes().setVisible(true);
             }
         });
     }
